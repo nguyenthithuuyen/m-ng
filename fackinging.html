@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<h1>Type anything showly</h1>
+<textarea oninput="fakeText()" id="txt" cols="30" rows="10"></textarea>
+</center>
+<script>
+    let txt = 'Hải hỏi code là gì ư đay là code nè';
+    let arrTxt = txt.split(' ');
+    let str = '';
+    let count = 0;
+
+    function fakeText() {
+        str += arrTxt[count] + " ";
+        document.getElementById('txt').value = str;
+        count++;
+        if (count >= arrTxt.length) {
+            str = '';
+            count = 0;
+        }
+    }
+
+</script>
+
+</body>
+</html>
